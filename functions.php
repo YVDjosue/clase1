@@ -6,9 +6,12 @@
 // nombre_obtenerPromedio()
 
 //JOSUE
-
+function josue_bisiesto($anio) {
+    //mi funcion aqui mnodifico sin molestar
+}
 
 //JUACKO
+function juacko_bisiesto($age) {}
 
 
 //LALO
@@ -17,5 +20,3 @@
 
 
 //RAFA
-
-?>
