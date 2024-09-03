@@ -6,9 +6,7 @@
 // nombre_obtenerPromedio()
 
 //JOSUE
-function josue_bisiesto($anio){
-    
-}
+
 
 //JUACKO
 
