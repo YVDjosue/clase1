@@ -7,10 +7,14 @@
 
 //JOSUE
 
-
 //JUACKO
-
-
+function juacko_bisiesto($age)
+{
+  if ($age % 4 == 0) {
+    if ($age % 100 == 0) {
+    }
+  }
+}
 //LALO
 
 function lalo_bisiesto($anio){
@@ -86,6 +90,4 @@ lalo_obtenerPromedio("3");
 //Hola chicos
 
 
-//RAFA
-
-?>
+//RAF
