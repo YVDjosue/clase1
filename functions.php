@@ -187,34 +187,35 @@ function lalo_bisiesto($anio)
   return $anio;
 }
 lalo_bisiesto(2000);
-"<br>";
-"<br>";
-function lalo_factorial($n)
-{
-  $f = 1;
-  for ($i = 1; $i <= $n; $i++) {
-    $f = $f * $i;
-  }
-  echo "El factoria de $n es: $f";
 
-  return $n;
+echo "<br>";
+echo"<br>";
+function lalo_factorial($n){
+    $f=1;
+    for ($i=1; $i<=$n; $i++){
+            $f=$f*$i;
+    }echo "El factoria de $n es: $f";
+    
+    return $n;
 }
 
 lalo_factorial(5);
 
-
-function lalo_esMayorDeEdad($edad)
-{
-  if ($edad > 18) {
-    echo "Es mayor de edad";
-  } else {
-    echo "No es mayor de edad";
-  }
-  return $edad;
+echo "<br>";
+echo"<br>";
+function lalo_esMayorDeEdad($edad){
+    if($edad>18){
+        echo "Es mayor de edad";
+    }else{
+        echo "No es mayor de edad";
+    }
+    return $edad;
 }
 
 lalo_esMayorDeEdad(17);
 
+echo "<br>";
+echo"<br>";
 
 function lalo_saludame($nombre)
 {
@@ -223,17 +224,9 @@ function lalo_saludame($nombre)
 }
 
 lalo_saludame("Lalo");
+echo "<br>";
+echo"<br>";
 
-function lalo_obtenerPromedio($n){
-        $prom=1;
-    for ($i= 1; $i<=$n; $i++){
-        $prom=$i/$n;
-        echo "El promedio de ";
-    }
-    return  $prom;
-}
-
-lalo_obtenerPromedio("3");
 ?>
 
 
