@@ -35,8 +35,8 @@ function lalo_bisiesto($anio){
     return $anio;
 }
 lalo_bisiesto(2000);
-"<br>";
-"<br>";
+echo "<br>";
+echo"<br>";
 function lalo_factorial($n){
     $f=1;
     for ($i=1; $i<=$n; $i++){
@@ -48,7 +48,8 @@ function lalo_factorial($n){
 
 lalo_factorial(5);
 
-
+echo "<br>";
+echo"<br>";
 function lalo_esMayorDeEdad($edad){
     if($edad>18){
         echo "Es mayor de edad";
@@ -60,6 +61,8 @@ function lalo_esMayorDeEdad($edad){
 
 lalo_esMayorDeEdad(17);
 
+echo "<br>";
+echo"<br>";
 
 function lalo_saludame($nombre) {
     echo "Hola, " . $nombre . "!";
@@ -67,17 +70,9 @@ function lalo_saludame($nombre) {
 }
 
 lalo_saludame("Lalo");
+echo "<br>";
+echo"<br>";
 
-function lalo_obtenerPromedio($n){
-        $prom=1;
-    for ($i= 1; $i<=$n; $i++){
-        $prom=$i/$n;
-        echo "El promedio de "
-    }
-    return  $prom;
-}
-
-lalo_obtenerPromedio("3");
 ?>
 
 
