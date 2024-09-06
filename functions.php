@@ -5,7 +5,7 @@
 // nombre_saludame($nombre)
 // nombre_obtenerPromedio()
 
-//JOSUE
+//JOSUE VALDEZ
 function josue_evaluaBisiesto($anio){
     if (josue_esBisiesto($anio)){
         echo "El año es bisiesto";
