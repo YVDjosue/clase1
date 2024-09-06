@@ -6,6 +6,64 @@
 // nombre_obtenerPromedio()
 
 //JOSUE
+function josue_evaluaBisiesto($anio){
+    if (josue_esBisiesto($anio)){
+        echo "El año es bisiesto";
+    }else{
+        echo "El año no es bisiesto";
+    }
+}
+
+function josue_esBisiesto($anio){
+    if ($anio % 4 == 0) {
+        if ($anio % 100 == 0) {
+            if ($anio % 400 == 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }else{
+            return true;
+        }
+    }else{
+        return false;
+    }
+}
+
+function josue_factorial($n){
+    if ($n < 0) {
+        return 0;
+    }else{
+        $rpta=1;
+        for($i=1;$i<=$n;$i++){
+            $rpta=$rpta*$i;
+        }
+        return $rpta;
+    }
+}
+
+function josue_esMayorDeEdad($edad){
+    if ($edad >= 18){
+        echo "Es mayor de edad";
+    }else{
+        echo "No es mayor de edad";
+    }
+}
+
+function josue_saludame($nombre){    
+    echo "Hola, " . $nombre . " como estas?";
+}
+
+function josue_obtenerPromedio($numeros){
+    $suma=0;
+    $cant=count($numeros);
+    for($i=0;$i<$cant;$i++){
+        $suma+=$numeros[$i];
+    }
+    return $suma/$cant;
+}
+
+
 
 ///                               JUACKO
 
@@ -170,7 +228,7 @@ function lalo_obtenerPromedio($n){
         $prom=1;
     for ($i= 1; $i<=$n; $i++){
         $prom=$i/$n;
-        echo "El promedio de "
+        echo "El promedio de ";
     }
     return  $prom;
 }
