@@ -10,7 +10,7 @@
 ///                               JUACKO
 
 // Función para verificar si un año es bisiesto
-function esBisiesto($anio)
+function juacko_esBisiesto($anio)
 {
   // Un año es bisiesto si es divisible por 4
   // Pero si es divisible por 100, no es bisiesto a menos que también sea divisible por 400
@@ -23,14 +23,14 @@ $anios = [2000, 2001, 2004, 2100, 2200, 2300, 2400, 2020, 2024, 2025];
 echo "Años bisiestos entre los años de ejemplo:\n";
 
 foreach ($anios as $anio) {
-  if (esBisiesto($anio)) {
+  if (juacko_esBisiesto($anio)) {
     echo "$anio es un año bisiesto.\n";
   } else {
     echo "$anio no es un año bisiesto.\n";
   }
 }
 //Funcion para calcular el factorial de un numero
-function factorial($numero)
+function juacko_factorial($numero)
 {
   if ($numero < 0) {
     return "El factorial no está definido para números negativos.";
@@ -44,8 +44,8 @@ function factorial($numero)
 
 // Ejemplo de uso
 $numero = 5;
-echo "El factorial de $numero es: " . factorial($numero) . "\n";
-echo "El factorial de 10 es: " . factorial(4) . "\n";
+echo "El factorial de $numero es: " . juacko_factorial($numero) . "\n";
+echo "El factorial de 10 es: " . juacko_factorial(4) . "\n";
 
 // nombre_esMayorDeEdad($edad)
 
@@ -56,7 +56,7 @@ echo "El factorial de 10 es: " . factorial(4) . "\n";
  *
  * @return boolean True si la edad es mayor de edad, false de lo contrario.
  */
-function esMayorDeEdad($edad)
+function juacko_esMayorDeEdad($edad)
 {
   return $edad >= 18;
 }
@@ -64,16 +64,16 @@ function esMayorDeEdad($edad)
 // Ejemplo de uso
 
 $edad = 17;
-echo esMayorDeEdad($edad) ? "$edad es mayor de edad.\n" : "$edad no es mayor de edad.\n";
+echo juacko_esMayorDeEdad($edad) ? "$edad es mayor de edad.\n" : "$edad no es mayor de edad.\n";
 
 // nombre_saludame($nombre)
-function saludame($nombre)
+function juacko_saludame($nombre)
 {
   echo "Hola, Bienvenido a Dota 2 : $nombre" . "\n";
 }
 
 // Ejemplo de uso
-saludame("Juacko");
+juacko_saludame("Juacko");
 
 // nombre_obtenerPromedio()
 $notas = [7, 8, 9, 10];
@@ -84,7 +84,7 @@ $notas = [7, 8, 9, 10];
  *
  * @return float El promedio de los n meros.
  */
-function obtenerPromedio($notas)
+function juacko_obtenerPromedio($notas)
 {
 
   return array_sum($notas) / count($notas);
@@ -92,57 +92,76 @@ function obtenerPromedio($notas)
 
 // Ejemplo de uso
 
-$promedio = obtenerPromedio($notas);
+$promedio = juacko_obtenerPromedio($notas);
 echo "El promedio es: $promedio\n";
+
+//funcion para saber el promedio de 0 hasta n, de un numero n dado
+function juacko_calcularPromedio($numero)
+{
+  $suma = 0;
+  for ($i = 1; $i <= $numero; $i++) {
+    $suma += $i;
+  }
+  return $suma / $numero;
+}
+
+echo "El promedio es: " . juacko_calcularPromedio(10);
+
+
 //LALO
 
-function lalo_bisiesto($anio){
-    if($anio % 4== 0){ 
-        if($anio % 100== 0){
-            if($anio % 400== 0){
-                echo "Es año bisiesto";
-            }else{
-                echo "Es año normal";
-            }
-        }else{
-            echo "Es año bisiesto";
-        }
-    }else{
+function lalo_bisiesto($anio)
+{
+  if ($anio % 4 == 0) {
+    if ($anio % 100 == 0) {
+      if ($anio % 400 == 0) {
+        echo "Es año bisiesto";
+      } else {
         echo "Es año normal";
+      }
+    } else {
+      echo "Es año bisiesto";
     }
-    
-    return $anio;
+  } else {
+    echo "Es año normal";
+  }
+
+  return $anio;
 }
 lalo_bisiesto(2000);
 "<br>";
 "<br>";
-function lalo_factorial($n){
-    $f=1;
-    for ($i=1; $i<=$n; $i++){
-            $f=$f*$i;
-    }echo "El factoria de $n es: $f";
-    
-    return $n;
+function lalo_factorial($n)
+{
+  $f = 1;
+  for ($i = 1; $i <= $n; $i++) {
+    $f = $f * $i;
+  }
+  echo "El factoria de $n es: $f";
+
+  return $n;
 }
 
 lalo_factorial(5);
 
 
-function lalo_esMayorDeEdad($edad){
-    if($edad>18){
-        echo "Es mayor de edad";
-    }else{
-        echo "No es mayor de edad";
-    }
-    return $edad;
+function lalo_esMayorDeEdad($edad)
+{
+  if ($edad > 18) {
+    echo "Es mayor de edad";
+  } else {
+    echo "No es mayor de edad";
+  }
+  return $edad;
 }
 
 lalo_esMayorDeEdad(17);
 
 
-function lalo_saludame($nombre) {
-    echo "Hola, " . $nombre . "!";
-    return $nombre;
+function lalo_saludame($nombre)
+{
+  echo "Hola, " . $nombre . "!";
+  return $nombre;
 }
 
 lalo_saludame("Lalo");
