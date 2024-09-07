@@ -6,67 +6,73 @@
 // nombre_obtenerPromedio()
 
 //JOSUE
-function josue_evaluaBisiesto($anio){
-    if (josue_esBisiesto($anio)){
-        echo "El año es bisiesto";
-    }else{
-        echo "El año no es bisiesto";
-    }
+function josue_evaluaBisiesto($anio)
+{
+  if (josue_esBisiesto($anio)) {
+    echo "El año es bisiesto";
+  } else {
+    echo "El año no es bisiesto";
+  }
 }
 
-function josue_esBisiesto($anio){
-    if ($anio % 4 == 0) {
-        if ($anio % 100 == 0) {
-            if ($anio % 400 == 0) {
-                return true;
-            } else {
-                return false;
-            }
-        }else{
-            return true;
-        }
-    }else{
+function josue_esBisiesto($anio)
+{
+  if ($anio % 4 == 0) {
+    if ($anio % 100 == 0) {
+      if ($anio % 400 == 0) {
+        return true;
+      } else {
         return false;
+      }
+    } else {
+      return true;
     }
+  } else {
+    return false;
+  }
 }
 
-function josue_factorial($n){
-    if ($n < 0) {
-        return 0;
-    }else{
-        $rpta=1;
-        for($i=1;$i<=$n;$i++){
-            $rpta=$rpta*$i;
-        }
-        return $rpta;
+function josue_factorial($n)
+{
+  if ($n < 0) {
+    return 0;
+  } else {
+    $rpta = 1;
+    for ($i = 1; $i <= $n; $i++) {
+      $rpta = $rpta * $i;
     }
+    return $rpta;
+  }
 }
 
-function josue_esMayorDeEdad($edad){
-    if ($edad >= 18){
-        echo "Es mayor de edad";
-    }else{
-        echo "No es mayor de edad";
-    }
+function josue_esMayorDeEdad($edad)
+{
+  if ($edad >= 18) {
+    echo "Es mayor de edad";
+  } else {
+    echo "No es mayor de edad";
+  }
 }
 
-function josue_saludame($nombre){    
-    echo "Hola, " . $nombre . " como estas?";
+function josue_saludame($nombre)
+{
+  echo "Hola, " . $nombre . " como estas?";
 }
 
-function josue_obtenerPromedio($numeros){
-    $suma=0;
-    $cant=count($numeros);
-    for($i=0;$i<$cant;$i++){
-        $suma+=$numeros[$i];
-    }
-    return $suma/$cant;
+function josue_obtenerPromedio($numeros)
+{
+  $suma = 0;
+  $cant = count($numeros);
+  for ($i = 0; $i < $cant; $i++) {
+    $suma += $numeros[$i];
+  }
+  return $suma / $cant;
 }
 
 
 
 ///                               JUACKO
-
+echo "JUACKO\n";
 // Función para verificar si un año es bisiesto
 function juacko_esBisiesto($anio)
 {
@@ -74,13 +80,8 @@ function juacko_esBisiesto($anio)
   // Pero si es divisible por 100, no es bisiesto a menos que también sea divisible por 400
   return ($anio % 4 == 0 && $anio % 100 != 0) || ($anio % 400 == 0);
 }
-
-// Array con años de ejemplo
-$anios = [2000, 2001, 2004, 2100, 2200, 2300, 2400, 2020, 2024, 2025];
-
-echo "Años bisiestos entre los años de ejemplo:\n";
-
-foreach ($anios as $anio) {
+function juacko_evaluaBisiesto($anio)
+{
   if (juacko_esBisiesto($anio)) {
     echo "$anio es un año bisiesto.\n";
   } else {
@@ -119,11 +120,21 @@ function juacko_esMayorDeEdad($edad)
   return $edad >= 18;
 }
 
-// Ejemplo de uso
-
-$edad = 17;
-echo juacko_esMayorDeEdad($edad) ? "$edad es mayor de edad.\n" : "$edad no es mayor de edad.\n";
-
+/**
+ * Evalua si una edad es mayor de edad o no.
+ *
+ * @param int $age La edad a verificar.
+ *
+ * @return string Un mensaje indicando si la edad es mayor de edad o no.
+ */
+function juacko_evaluaMayorDeEdad($age)
+{
+  if (juacko_esMayorDeEdad($age)) {
+    echo "$age es mayor de edad.\n";
+  } else {
+    echo "$age no es mayor de edad.\n";
+  }
+}
 // nombre_saludame($nombre)
 function juacko_saludame($nombre)
 {
@@ -224,13 +235,14 @@ function lalo_saludame($nombre)
 
 lalo_saludame("Lalo");
 
-function lalo_obtenerPromedio($n){
-        $prom=1;
-    for ($i= 1; $i<=$n; $i++){
-        $prom=$i/$n;
-        echo "El promedio de ";
-    }
-    return  $prom;
+function lalo_obtenerPromedio($n)
+{
+  $prom = 1;
+  for ($i = 1; $i <= $n; $i++) {
+    $prom = $i / $n;
+    echo "El promedio de ";
+  }
+  return  $prom;
 }
 
 lalo_obtenerPromedio("3");
