@@ -161,8 +161,6 @@ function juacko_calcularPromedio($numero)
   return $suma / $numero;
 }
 
-
-
 //LALO
 
 function lalo_bisiesto($anio)
@@ -183,25 +181,16 @@ function lalo_bisiesto($anio)
 
   return $anio;
 }
-lalo_bisiesto(2000);
-
-echo "<br>";
-echo "<br>";
 function lalo_factorial($n)
 {
   $f = 1;
   for ($i = 1; $i <= $n; $i++) {
     $f = $f * $i;
   }
-  echo "El factoria de $n es: $f";
+  echo "El factorial de $n es: $f";
 
   return $n;
 }
-
-lalo_factorial(5);
-
-echo "<br>";
-echo "<br>";
 function lalo_esMayorDeEdad($edad)
 {
   if ($edad > 18) {
@@ -211,33 +200,19 @@ function lalo_esMayorDeEdad($edad)
   }
   return $edad;
 }
-
-lalo_esMayorDeEdad(17);
-
-echo "<br>";
-echo "<br>";
-
 function lalo_saludame($nombre)
 {
-  echo "Hola, " . $nombre . "!";
+  echo "Hola , " . $nombre . "!";
   return $nombre;
 }
 
-lalo_saludame("Lalo");
-echo "<br>";
-echo "<br>";
-
-function lalo_obtenerPromedio($n)
-{
-  $prom = 1;
-  for ($i = 1; $i <= $n; $i++) {
-    $prom = $i / $n;
-    echo "El promedio de ";
-  }
-  return  $prom;
+function lalo_obtenerPromedio($numeros) {
+  $total = array_sum($numeros);
+  $cantidad = count($numeros);
+  echo "El promedio es: ". $total / $cantidad;
+  return $total / $cantidad;
 }
 
-lalo_obtenerPromedio("3");
 
 ?>
 
