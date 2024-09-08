@@ -34,3 +34,5 @@ function esMayorDeEdad($edad)
 }
 
 echo esMayorDeEdad(20);
+echo esMayorDeEdad(17);
+echo esMayorDeEdad(22);
