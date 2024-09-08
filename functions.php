@@ -14,59 +14,63 @@ function josue_evaluaBisiesto($anio){
     }
 }
 
-function josue_esBisiesto($anio){
-    if ($anio % 4 == 0) {
-        if ($anio % 100 == 0) {
-            if ($anio % 400 == 0) {
-                return true;
-            } else {
-                return false;
-            }
-        }else{
-            return true;
-        }
-    }else{
+function josue_esBisiesto($anio)
+{
+  if ($anio % 4 == 0) {
+    if ($anio % 100 == 0) {
+      if ($anio % 400 == 0) {
+        return true;
+      } else {
         return false;
+      }
+    } else {
+      return true;
     }
+  } else {
+    return false;
+  }
 }
 
-function josue_factorial($n){
-    if ($n < 0) {
-        return 0;
-    }else{
-        $rpta=1;
-        for($i=1;$i<=$n;$i++){
-            $rpta=$rpta*$i;
-        }
-        return $rpta;
+function josue_factorial($n)
+{
+  if ($n < 0) {
+    return 0;
+  } else {
+    $rpta = 1;
+    for ($i = 1; $i <= $n; $i++) {
+      $rpta = $rpta * $i;
     }
+    return $rpta;
+  }
 }
 
-function josue_esMayorDeEdad($edad){
-    if ($edad >= 18){
-        echo "Es mayor de edad";
-    }else{
-        echo "No es mayor de edad";
-    }
+function josue_esMayorDeEdad($edad)
+{
+  if ($edad >= 18) {
+    echo "Es mayor de edad";
+  } else {
+    echo "No es mayor de edad";
+  }
 }
 
-function josue_saludame($nombre){    
-    echo "Hola, " . $nombre . " como estas?";
+function josue_saludame($nombre)
+{
+  echo "Hola, " . $nombre . " como estas?";
 }
 
-function josue_obtenerPromedio($numeros){
-    $suma=0;
-    $cant=count($numeros);
-    for($i=0;$i<$cant;$i++){
-        $suma+=$numeros[$i];
-    }
-    return $suma/$cant;
+function josue_obtenerPromedio($numeros)
+{
+  $suma = 0;
+  $cant = count($numeros);
+  for ($i = 0; $i < $cant; $i++) {
+    $suma += $numeros[$i];
+  }
+  return $suma / $cant;
 }
 
 
 
 ///                               JUACKO
-
 // Función para verificar si un año es bisiesto
 function juacko_esBisiesto($anio)
 {
@@ -74,13 +78,8 @@ function juacko_esBisiesto($anio)
   // Pero si es divisible por 100, no es bisiesto a menos que también sea divisible por 400
   return ($anio % 4 == 0 && $anio % 100 != 0) || ($anio % 400 == 0);
 }
-
-// Array con años de ejemplo
-$anios = [2000, 2001, 2004, 2100, 2200, 2300, 2400, 2020, 2024, 2025];
-
-echo "Años bisiestos entre los años de ejemplo:\n";
-
-foreach ($anios as $anio) {
+function juacko_evaluaBisiesto($anio)
+{
   if (juacko_esBisiesto($anio)) {
     echo "$anio es un año bisiesto.\n";
   } else {
@@ -100,11 +99,6 @@ function juacko_factorial($numero)
   return $resultado;
 }
 
-// Ejemplo de uso
-$numero = 5;
-echo "El factorial de $numero es: " . juacko_factorial($numero) . "\n";
-echo "El factorial de 10 es: " . juacko_factorial(4) . "\n";
-
 // nombre_esMayorDeEdad($edad)
 
 /**
@@ -119,19 +113,27 @@ function juacko_esMayorDeEdad($edad)
   return $edad >= 18;
 }
 
-// Ejemplo de uso
-
-$edad = 17;
-echo juacko_esMayorDeEdad($edad) ? "$edad es mayor de edad.\n" : "$edad no es mayor de edad.\n";
-
+/**
+ * Evalua si una edad es mayor de edad o no.
+ *
+ * @param int $age La edad a verificar.
+ *
+ * @return string Un mensaje indicando si la edad es mayor de edad o no.
+ */
+function juacko_evaluaMayorDeEdad($age)
+{
+  if (juacko_esMayorDeEdad($age)) {
+    echo "$age es mayor de edad.\n";
+  } else {
+    echo "$age no es mayor de edad.\n";
+  }
+}
 // nombre_saludame($nombre)
 function juacko_saludame($nombre)
 {
   echo "Hola, Bienvenido a Dota 2 : $nombre" . "\n";
 }
 
-// Ejemplo de uso
-juacko_saludame("Juacko");
 
 // nombre_obtenerPromedio()
 $notas = [7, 8, 9, 10];
@@ -148,10 +150,6 @@ function juacko_obtenerPromedio($notas)
   return array_sum($notas) / count($notas);
 }
 
-// Ejemplo de uso
-
-$promedio = juacko_obtenerPromedio($notas);
-echo "El promedio es: $promedio\n";
 
 //funcion para saber el promedio de 0 hasta n, de un numero n dado
 function juacko_calcularPromedio($numero)
@@ -163,7 +161,6 @@ function juacko_calcularPromedio($numero)
   return $suma / $numero;
 }
 
-echo "El promedio es: " . juacko_calcularPromedio(10);
 
 
 //LALO
@@ -187,8 +184,9 @@ function lalo_bisiesto($anio)
   return $anio;
 }
 lalo_bisiesto(2000);
-"<br>";
-"<br>";
+
+echo "<br>";
+echo "<br>";
 function lalo_factorial($n)
 {
   $f = 1;
@@ -202,7 +200,8 @@ function lalo_factorial($n)
 
 lalo_factorial(5);
 
-
+echo "<br>";
+echo "<br>";
 function lalo_esMayorDeEdad($edad)
 {
   if ($edad > 18) {
@@ -215,6 +214,8 @@ function lalo_esMayorDeEdad($edad)
 
 lalo_esMayorDeEdad(17);
 
+echo "<br>";
+echo "<br>";
 
 function lalo_saludame($nombre)
 {
@@ -223,17 +224,21 @@ function lalo_saludame($nombre)
 }
 
 lalo_saludame("Lalo");
+echo "<br>";
+echo "<br>";
 
-function lalo_obtenerPromedio($n){
-        $prom=1;
-    for ($i= 1; $i<=$n; $i++){
-        $prom=$i/$n;
-        echo "El promedio de ";
-    }
-    return  $prom;
+function lalo_obtenerPromedio($n)
+{
+  $prom = 1;
+  for ($i = 1; $i <= $n; $i++) {
+    $prom = $i / $n;
+    echo "El promedio de ";
+  }
+  return  $prom;
 }
 
 lalo_obtenerPromedio("3");
+
 ?>
 
 
