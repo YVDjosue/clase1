@@ -30,6 +30,23 @@ echo "<br><br><br><br>";
 
 //lalo
 
+echo "Lalo";
+echo "<br>";
+echo "<br>";
+lalo_bisiesto(2000);
+echo "<br>";
+lalo_factorial(5);
+echo "<br>";
+lalo_esMayorDeEdad(17);
+echo "<br>";
+lalo_saludame("Lalo");
+echo "<br>";
+lalo_obtenerPromedio([1,1,2,1,1]);
+
+
+
+
+
 
 
 //rafa
