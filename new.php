@@ -22,4 +22,15 @@ function calcularPromedio($numero)
   return $suma / $numero;
 }
 
-echo "El promedio es: " . calcularPromedio(10);
+echo "El promedio es: " . calcularPromedio(10) . "\n";
+
+function esMayorDeEdad($edad)
+{
+  if ($edad > 18) {
+    echo "Es mayor de edad";
+  } else {
+    echo "No es mayor de edad";
+  }
+}
+
+echo esMayorDeEdad(20);
