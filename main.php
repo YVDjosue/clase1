@@ -25,7 +25,7 @@ juacko_evaluaMayorDeEdad(22);
 echo "<br>";
 juacko_saludame("Juacko");
 echo "<br>";
-echo Juacko_obtenerPromedio([8, 9, 10, 7, 8, 9, 10]);
+echo Juacko_obtenerPromedio([4, 6, 9, 7, 8, 9, 10]);
 echo "<br><br><br><br>";
 
 //lalo
@@ -41,7 +41,7 @@ lalo_esMayorDeEdad(17);
 echo "<br>";
 lalo_saludame("Lalo");
 echo "<br>";
-lalo_obtenerPromedio([1,1,2,1,1]);
+lalo_obtenerPromedio([1, 1, 2, 1, 1]);
 
 
 

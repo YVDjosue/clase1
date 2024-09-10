@@ -1,38 +1,38 @@
-
 <?php
-// $anio = 1987;
-function rafa_bisiesto($anio)
+class CuentaBancaria
 {
-  if (($anio % 4 == 0 && $anio % 100 != 0) || ($anio % 400 == 0)) {
-    echo "$anio Es bisiesto \n";
-  } else {
-    echo "$anio No es bisiesto \n";
-  };
-};
+  private $titular;
+  private $saldo;
 
-rafa_bisiesto(1997);
-
-//funcion para saber el promedio de 0 hasta n, de un numero n dado
-function calcularPromedio($numero)
-{
-  $suma = 0;
-  for ($i = 1; $i <= $numero; $i++) {
-    $suma += $i;
+  public function __construct($titular, $saldoInicial)
+  {
+    $this->titular = $titular;
+    $this->saldo = $saldoInicial;
   }
-  return $suma / $numero;
-}
 
-echo "El promedio es: " . calcularPromedio(10) . "\n";
+  public function depositar($cantidad)
+  {
+    $this->saldo += $cantidad;
+  }
 
-function esMayorDeEdad($edad)
-{
-  if ($edad > 18) {
-    echo "Es mayor de edad";
-  } else {
-    echo "No es mayor de edad";
+  public function retirar($cantidad)
+  {
+    if ($cantidad <= $this->saldo) {
+      $this->saldo -= $cantidad;
+    } else {
+      echo "Fondos insuficientes para el retiro \n";
+    }
+  }
+
+  public function consultarSaldo()
+  {
+    return $this->saldo;
   }
 }
 
-echo esMayorDeEdad(20);
-echo esMayorDeEdad(17);
-echo esMayorDeEdad(22);
+$cuentaBancaria = new CuentaBancaria("Josue", 1000);
+
+$cuentaBancaria->depositar(500);
+$cuentaBancaria->retirar(200);
+$cuentaBancaria->retirar(2000);
+echo $cuentaBancaria->consultarSaldo() . "\n";
